@@ -1,0 +1,23 @@
+learning_rate: 0.001
+batch_size: 32
+num_epochs: 50
+model_save_path: saved_model.pt
+data:
+  raw_data_path: data/raw/
+  processed_data_path: data/processed/
+  synthetic_data_path: data/synthetic/
+training:
+  optimizer: Adam
+  loss_function: CrossEntropyLoss
+  metrics:
+    - accuracy
+    - f1_score
+evaluation:
+  evaluation_metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+logging:
+  log_dir: logs/
+  log_level: INFO
